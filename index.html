@@ -247,6 +247,8 @@
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-card::before {
@@ -270,10 +272,11 @@
       box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
     }
 
+    /* Estilo para iconos removido/ajustado por si quieres usar SVGs luego */
     .project-icon {
       font-size: 3em;
       margin-bottom: 1rem;
-      display: block;
+      display: none; /* Ocultamos los iconos emojis */
     }
 
     .project-title {
@@ -287,6 +290,7 @@
       color: #666;
       margin-bottom: 1.5rem;
       line-height: 1.6;
+      flex-grow: 1;
     }
 
     .project-link {
@@ -297,6 +301,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: gap 0.3s ease;
+      margin-top: auto;
     }
 
     .project-link:hover {
@@ -475,7 +480,6 @@
       <div class="projects-grid">
         
         <div class="project-card">
-          <span class="project-icon">🧠</span>
           <h3 class="project-title">Proyecto: Clasificación de Estrés (Sueño)</h3>
           <p class="project-description">
             Proyecto completo de clasificación binaria. Incluye análisis exploratorio (EDA), limpieza, filtrado de outliers y creación de variable objetivo (nivel de estrés) del dataset de sueño. Posteriormente, implementa y evalúa modelos (Regresión Logística, etc.) con métricas como Precision, Recall, F1-Score y una UI interactiva.
@@ -486,7 +490,6 @@
         </div>
 
         <div class="project-card">
-          <span class="project-icon">🏥</span>
           <h3 class="project-title">Proyecto: Regresión de Costos de Seguro</h3>
           <p class="project-description">
             Proyecto completo de regresión. Inicia con un análisis exploratorio (EDA) del dataset de costos de seguro, tratando valores faltantes, filtrando outliers (IQR) y dividiendo el set. Luego, implementa y compara modelos (Regresión Lineal, etc.) para predecir costos, evaluándolos con métricas como MAPE, MSE y RMSE.
@@ -497,7 +500,6 @@
         </div>
 
         <div class="project-card">
-          <span class="project-icon">🔍</span>
           <h3 class="project-title">Proyecto: Clustering (Salud Mental)</h3>
           <p class="project-description">
             Implementación de un modelo no supervisado (K-Means) para segmentar pacientes según su estado mental. Incluye la determinación del número óptimo de clusters (n) usando los métodos de Codo (inercia) y Silueta (con Yellowbrick/Scikit-learn) y un análisis descriptivo de cada cluster para personal médico.
@@ -507,8 +509,20 @@
           </a>
         </div>
 
+        <div class="project-card">
+          <h3 class="project-title">Clasificación de Rostros (CNN)</h3>
+          <p class="project-description">
+            Clasificación binaria (Natalie Portman vs Scarlett Johansson) utilizando <strong>TensorFlow y Python puro</strong> (sin Scikit-Learn). 
+            Se implementó una red neuronal convolucional (CNN) desde cero, incluyendo un pipeline eficiente con <code>tf.data</code>, 
+            Data Augmentation para balanceo de clases, limpieza de datos corruptos y evaluación mediante matriz de confusión personalizada.
+          </p>
+          <a href="https://github.com/JosueM028/celebrity-face-classifier" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
       </div>
-      </div>
+    </div>
   </section>
 
   <footer>
@@ -557,8 +571,6 @@
       observer.observe(card);
     });
   </script>
-</body>
-</html>
 </body>
 </html>
 
