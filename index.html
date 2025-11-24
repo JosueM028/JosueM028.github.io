@@ -272,11 +272,11 @@
       box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
     }
 
-    /* Estilo para iconos removido/ajustado por si quieres usar SVGs luego */
+    /* Estilo para iconos removido (sin emojis) */
     .project-icon {
       font-size: 3em;
       margin-bottom: 1rem;
-      display: none; /* Ocultamos los iconos emojis */
+      display: none;
     }
 
     .project-title {
@@ -521,6 +521,16 @@
           </a>
         </div>
 
+        <div class="project-card">
+          <h3 class="project-title">Reconocimiento Facial Multiclase (VGG16)</h3>
+          <p class="project-description">
+            Expansión del proyecto a 6 clases (incluyendo Denzel Washington, Megan Fox, etc.). Se construyó la arquitectura <strong>VGG16 desde cero</strong> para resolver el colapso de modo usando Batch Normalization. Incluye análisis de matriz de confusión multiclase y despliegue en una <strong>Web App con Flask</strong> para pruebas en tiempo real.
+          </p>
+          <a href="https://github.com/JosueM028/celebrity-face-classifier" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -573,4 +583,6 @@
   </script>
 </body>
 </html>
+</html>
+
 
